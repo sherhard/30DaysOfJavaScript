@@ -1,0 +1,26 @@
+.wrapper {
+  text-align: center;
+}
+.list_task {
+  display: none;
+}
+.list_task li {
+  list-style-type: none;
+  font-weight: 700px;
+  line-height: 2pc;
+}
+.task {
+}
+
+ol {
+  list-style-type: none; /* Убираем исходные маркеры */
+  counter-reset: item; /* Обнуляем счетчик списка */
+}
+li::before {
+  content: counter(item) ") "; /* Добавляем к числам скобку */
+  counter-increment: item; /* Задаём имя счетчика */
+}
+
+.begin_task {
+  border-top: 2px solid black;
+}
